@@ -1,7 +1,5 @@
 # WEB 1.0 Web Foundations
 
-<span class="refresh-instructions">This is a living document! Hold down the `SHIFT` key and press `Refresh` to get the latest version.</span>
-
 ## Course Description
 
 This course covers the foundations of HTML, CSS, and JavaScript which are the building blocks of any website. Students will master HTML and intermediate CSS allowing them to create a compelling website from scratch. JavaScript will be introduced and students will learn basic concepts and syntax needed to create interactive frontend applications. Understand the architecture of frontend applications, the role of each technology in creating modular applications, and professional best practices in frontend development.
