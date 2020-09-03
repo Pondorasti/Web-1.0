@@ -3,152 +3,74 @@
   <head>
     <title>Android - Example</title>
     <style>
-      /* You'll use flex to arrange the elements on this page */
-
-      /* Start with the body. Apply some styles here to set the 
-      typography for the entire page. */
+  
       body {
-        /* Set the font family to a San Serif */
-        
-        /* Set the base font size 18px */
-        
-        /* Set the line-height 1.5 */
-        
-        /* Set the foreground color #000 */
-        
-        /* Set the background color rgb(80, 134, 236) */
-        
+        font-family: 'San Serif';
+        font-size: 18px;
+        line-height: 1.5;
+        color: #000000;
+        background-color: rgba(101, 148, 236, 0.849);
       }
 
-
-      /* Start with the nav list. Since there are several list 
-      use the child selector to select just the ul that is a 
-      child of the nav */
       nav > ul {
-        /* remove the bullet */
-        
-        /* remove the padding 0 */
-        
-        /* Arrange all of the items in a row with flex */
-        /* Flex arranges all of the children! */
-        /* Use display: flex */
-        /* display: flex; */
-        
-        /* This arranges all of the nav > ul > li tags in a row */
-        /* The default arrangement is row */
-        /* Try these two */
-        /* flex-direction: row; */
-        /* flex-direction: column; */
+        list-style: none;        
+        padding: 0;
+        display: flex;
+        flex-direction: row;
       }
 
+      nav > ul > li {
+        display: flex;
+      }
 
-      /* Now style all of the links inside nav */
       nav a {
-        /* Remove the underline text-decoration: none; */
-        
-        /* set a background color #000 */
-        
-        /* Set the color of the text #fff */
-        
-        /* add some space around the boxes margin: 1px */
-        
-        /* add some space between the content and the edge of the boxes */
-        /* The first number is the padding on the top and bottom. */
-        /* The second number is padding on the left and right. */
-        /* padding: 0.5rem 1rem; */
-        
-        /* Make these elements display as a block */
-        /* display: block; */
-
-        /* Round the corners */
-        /* border-radius: 0.5rem; */
-
+        text-decoration: none;  
+        background-color: #000000;
+        color: #ffffff;
+        margin: 4px;
+        padding: 0.5rem 1rem;
+        display: block;
+        border-radius: 0.6rem;
       }
 
-
-      /* In many of the sections is a list (ul) it would be good if these 
-      lists were displayed horizontally. Take a look at the lists. These are 
-      usually a list of phones or tablets with images with a name and 
-      description below. */
-      /* Select the ul that is the descendant of a section */
-      section ul {
-        /* Display flex display: flex */
-        
-        /* Flex direction row flex-direction: row */
-        
-        /* Arrange things in the center on the MAIN axis */
-        /* justify-content: center; */
-        
-        /* Align things on the CROSS axis */
-        /* Look closely at the Popular Picks and Featured Tablets sections */
-        /* align-items: flex-end; */
-
-        /* Remove the bullet points */
-        
-        /* Remove padding 0 */
-        
+      header ~ section ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-end;
+        list-style: none;
+        padding: 0;
       }
 
-      /* Style the li tags that are children of ul tags that are childrem of sections */
-      /* No really that's what this sector is saying! */
       section > ul > li {
-        /* Add some margin: 1rem */
-        
-        /* A rem is a root em it's the same as the font size set on the body */
-        /* In this example you used 18px as the font-size set on the body */
-        /* so 1rem here is equal to 18px */
+        margin: 1rem;
       }
 
-
-      /* There is usually a Learn More button at the end of each section
-      style it! Buttons have some default styles that make them look the
-      way the do but you can chanhe this. */
       button {
-        /* Set the font-size to the base font size set in the body. */
-        /* font-size: 1rem; */
-
-        /* Color #fff */
-        
-        /* Remove the border */
-        /* border: none; */
-        
-        /* Background color rgb(19, 48, 64) */
-        
-        /* Padding top and bottom of 1rem left and right of 1.5rem */
-        /* padding: 1rem 1.5rem; */
-
-        /* Round the corners */
-        /* border-radius: 100px; */
+        font-size: 1rem;
+        color: #ffffff;
+        border: none;
+        background-color: rgb(19, 48, 64);
+        padding: 1rem 1.5rem;
+        border-radius: 100px;
       }
 
-
-      /* Might be nice if we used color to separate each section */
-      /* There's a section surrounding a series of other sections. */
-      /* Let's style all of the child sections but only the odd numbers */
       section > section:nth-child(odd) {
-        /* basckground color #fff */
-        
+        background-color: #ffffff;
+        border-radius: 16px;
+        margin: 0 1rem;
       }
 
-
-      /* Style all child sections */
       section > section {
-        /* These sections need some padding 2rem */
-        
+        padding: 2rem;
       }
 
-
-      /* make all the h2 tags really big */
       h2 {
-        /* font size 4rem */
-        
+        font-size: 4rem;
       }
 
-      /* headings, paragraphs and other tags have a default 
-      margin. You should adjust this. */
       h1, h2, h3, h4, p {
-        /* Set the margin only on the bottom */
-        /* margin: 0 0 1rem 0; */
+        margin: 0 0 1rem 0;
       }
       
     </style>
