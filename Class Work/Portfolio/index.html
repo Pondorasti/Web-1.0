@@ -5,63 +5,78 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <main>  <!-- Not sure if this is the correct usage of <main> -->
+    <main>
         <article>
             <header>
                 <h1>Hello there 👋 <br> My name is Alex </h1>
             </header>
 
-            <section>
-                <h2>About me</h2>
-                <p>I was born in Romania 🇷🇴. A couple of things I enjoy besides coding is cooking 👨‍🍳, watching movies 🍿, formula 1 fanatic 🚗, and mountain hiking 🏔.<p>
+            <div>
+                <section>
+                    <fieldset>
+                        <legend>
+                            <h2>About me</h2>
+                        </legend>
 
-                <h3>Favorite Qoute</h3>
-                <p><q>Learn from yesterday, live for today, hope for tomorrow.</q> - Albert Einstein</p>
-            </section>
+                        <p>I was born in Romania 🇷🇴. A couple of things I enjoy besides coding is cooking 👨‍🍳,
+                            watching
+                            movies 🍿, formula 1 fanatic 🚗, and mountain hiking 🏔.
+                        <p>
 
-            <hr>
+                        <h3>Favorite Qoute</h3>
+                        <p><q>Learn from yesterday, live for today, hope for tomorrow.</q> - Albert Einstein</p>
+                    </fieldset>
+                </section>
 
-            <section>
-                <h2>Skills</h2>
+                <section>
+                    <fieldset>
+                        <legend>
+                            <h2>Skills</h2>
+                        </legend>
 
-                <h3>Programming Languages</h3>
-                <ul>
-                    <li>C++</li>
-                    <li>Swift</li>
-                    <li>Python</li>
-                    <li>Bits of HTML</li>
-                </ul>
+                        <h3>Programming Languages</h3>
+                        <ul>
+                            <li>C++</li>
+                            <li>Swift</li>
+                            <li>Python</li>
+                            <li>Bits of HTML</li>
+                        </ul>
 
-                <h3>Software</h3>
-                <ul>
-                    <li>Xcode</li>
-                    <li>Notion</li>
-                    <li>Sketch</li>
-                    <li>GitKraken</li>
-                </ul>
-            </section>
+                        <h3>Software</h3>
+                        <ul>
+                            <li>Xcode</li>
+                            <li>Notion</li>
+                            <li>Sketch</li>
+                            <li>GitKraken</li>
+                        </ul>
+                    </fieldset>
+                </section>
 
-            <hr>
+                <section>
+                    <fieldset>
+                        <legend>
+                            <h2>Previous Work</h2>
+                        </legend>
 
-            <section>
-                <h2>Previous Work</h2>
-
-                <h3>Remote iOS Engineer <br> Sauna Tracker App</h3>
-                <p>Deep integration between HealthKit & WatchOS for tracking Sauna sessions.</p>
-                <ul>
-                    <li>First real world experience while working remotely</li>
-                    <li>Front-End Development of both iOS & WatchOS Apps</li>
-                    <li>Designed CoreData Model and implemented business logic</li>
-                    <li>The app is no longer on the App Store, design left on the next page</li>
-                </ul>
-                <figure>
-                    <img src="IllumeHealth.png" alt="App Design" style="width: 40%;">
-                    <figcaption>App Design</figcaption>
-                </figure>
-            </section>
+                        <h3>Remote iOS Engineer <br> Sauna Tracker App</h3>
+                        <p>Deep integration between HealthKit & WatchOS for tracking Sauna sessions.</p>
+                        <ul>
+                            <li>First real world experience while working remotely</li>
+                            <li>Front-End Development of both iOS & WatchOS Apps</li>
+                            <li>Designed CoreData Model and implemented business logic</li>
+                            <li>The app is no longer on the App Store, design left on the next page</li>
+                        </ul>
+                        <figure>
+                            <img src="IllumeHealth.png" alt="App Design" style="width: 40%;">
+                            <figcaption>App Design</figcaption>
+                        </figure>
+                    </fieldset>
+                </section>
+            </div>
 
             <footer>
                 <h4>Social Media</h4>
@@ -77,4 +92,5 @@
         </article>
     </main>
 </body>
+
 </html>
