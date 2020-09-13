@@ -27,7 +27,7 @@ h1 { font-size: 2.4rem; }
 }
 
 #header.blur {
-    background: rgba(5, 19, 38, 0.4);
+    background: rgba(0, 0, 0, 0.4);
 
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
@@ -56,26 +56,41 @@ h1 { font-size: 2.4rem; }
 /* Card */
 
 .card {
-    width: 100%;
+    width: 50%;
     position: relative;
+
+    object-fit: contain;
+    overflow: hidden;
+
+    transition: 0.3s;
 }
 
 .card-image {
     width: 100%;
-    object-fit: contain;
     border-radius: 2.4rem;
+
+    transition: 0.3s;
+    align-self: center;
+}
+
+.card:hover {
+    width: 55%;
+    /* border-radius: 2.4rem; */
 }
 
 .card-content {
+    width: 100%;
     position: absolute;
     bottom: 0;
-
-    width: 100%;
-    color: white;
-    background: rgba(0, 0, 0, 0.5);
+    
+    box-sizing: border-box;
+    padding: 3%;
 
     border-radius: 0rem 0rem 2.4rem 2.4rem;
 
-    box-sizing: border-box;
-    padding: 3%;
+    color: white;
+
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);    
 }
