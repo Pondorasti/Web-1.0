@@ -1,0 +1,38 @@
+
+body {
+    margin: 0px;
+    position: absolute;
+}
+
+/* Header */
+
+#header {
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+
+#header.blur {
+    background: rgba(5, 19, 38, 0.4);
+
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+#header .content {
+    padding: 24px 64px;
+}
+
+
+#header nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 100x;
+}
+
+#header nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0px 4px;
+}
