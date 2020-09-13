@@ -1,7 +1,13 @@
+html {
+    scroll-behavior: smooth;
+}
 
 body {
     margin: 0px;
-    position: absolute;
+}
+
+p { /* TODO: - Remove this */
+    margin: 0px;
 }
 
 /* Header */
@@ -19,20 +25,22 @@ body {
     -webkit-backdrop-filter: blur(8px);
 }
 
-#header .content {
+#header .nav-content {
     padding: 24px 64px;
 }
 
-
-#header nav {
+#header .nav-content {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: row;
     justify-content: flex-end;
-    gap: 100x;
 }
 
-#header nav a {
+#header * {
     color: #fff;
     text-decoration: none;
     margin: 0px 4px;
+}
+
+#header .nav-content :first-child {
+    width: 100%;
 }
