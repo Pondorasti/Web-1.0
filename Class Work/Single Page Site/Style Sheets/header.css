@@ -1,0 +1,34 @@
+/* Header */
+
+#header {
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+
+#header.blur {
+    background: rgba(0, 0, 0, 0.4);
+
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+#header .nav-content {
+    padding: 2.4rem 3.2rem;
+}
+
+#header .nav-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+#header * {
+    color: #fff;
+    text-decoration: none;
+    margin: 0rem 0.4rem;
+}
+
+#header .nav-content :first-child {
+    width: 100%;
+}

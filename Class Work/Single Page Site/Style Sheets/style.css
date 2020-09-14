@@ -7,6 +7,19 @@ body {
     margin: 0rem;
 }
 
+@media (prefers-color-scheme: dark) {
+    body {
+        color: white;
+        background-color: rgba(19, 19, 19);
+    }
+
+    img {
+        /* opacity: 0.9; */
+        filter: brightness(0.9)        
+    }
+}
+
+
 p { /* TODO: - Remove this */
     margin: 0rem;
 }
@@ -17,41 +30,6 @@ section {
 
 body { font-size: 1.4rem; }
 h1 { font-size: 2.4rem; }
-
-/* Header */
-
-#header {
-    position: fixed;
-    width: 100%;
-    z-index: 1;
-}
-
-#header.blur {
-    background: rgba(0, 0, 0, 0.4);
-
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-}
-
-#header .nav-content {
-    padding: 2.4rem 3.2rem;
-}
-
-#header .nav-content {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-}
-
-#header * {
-    color: #fff;
-    text-decoration: none;
-    margin: 0rem 0.4rem;
-}
-
-#header .nav-content :first-child {
-    width: 100%;
-}
 
 /* Card */
 
