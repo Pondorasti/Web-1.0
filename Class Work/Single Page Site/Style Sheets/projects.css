@@ -15,8 +15,6 @@
     transition: 0.3s;
     margin: 1.6rem;
     width: 100%;
-
-    background-color: red;
 }
 
 .project img {
@@ -37,12 +35,12 @@
 
 .project-content {
     width: 100%;
-    height: 20%;
+    height: 5.2rem;
     position: absolute;
     bottom: 0;
     
     box-sizing: border-box;
-    padding: 3%;
+    padding: 1.6rem;
     border-radius: 0rem 0rem 2.4rem 2.4rem;
     color: white;
 
@@ -58,13 +56,15 @@
 }
 
 .project-content p {
-    /* height: 120%; */
     visibility: hidden;
-    /* color: red; */
+    opacity: 0;
+
+    transition: 0.3s;
 }
 
 .project:hover p {
     visibility: visible;
+    opacity: 1;
 }
 
 @media (max-width: 944px) {

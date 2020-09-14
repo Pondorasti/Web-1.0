@@ -10,14 +10,16 @@
     <link rel="stylesheet" href="Style Sheets/header.css">
     <link rel="stylesheet" href="Style Sheets/home.css">
     <link rel="stylesheet" href="Style Sheets/projects.css">
+    <link rel="stylesheet" href="Style Sheets/footer.css">
 </head>
 
 <body>
     <main>
         <header>
             <div id="header" class="blur">
-                <nav class="nav-content" role="navigation">
-                    <a href="#home">Alexandru Turcanu</a>
+                <a href="#home">Alexandru Turcanu</a>
+
+                <nav class="nav-content" role="navigation">    
                     <a href="#home">Home</a>
                     <a href="#projects">Projects</a>
                     <a href="#awards">Awards</a>
@@ -45,10 +47,16 @@
 
                 <div>
                     <h1>About me</h1>
-                    <div class="card">
-                        <p>
-                            Passionate developer with a desire to create best in class apps and obsessed about designing fluid interfaces and animations.
-                        </p>
+                    <div class="about-me-container">
+                        <img src="Images/me.jpeg">
+
+
+                        <div class="card">
+                            <p>
+                                Passionate developer with a desire to create best in class apps and obsessed about
+                                designing fluid interfaces and animations.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -71,7 +79,7 @@
                         <img src="Images/Envision.png">
                         <div class="project-content">
                             <h2>Envision • 2019</h2>
-                            
+
                         </div>
                     </div>
 
@@ -79,7 +87,7 @@
                         <img src="Images/IllumeHealth2.png">
                         <div class="project-content">
                             <h2>Illume Health • 2018</h2>
-                            
+
                         </div>
                     </div>
 
@@ -95,6 +103,7 @@
 
 
             <div id="awards">
+                <h1>Awards</h1>
                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
                     industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
                     and
@@ -181,7 +190,37 @@
             <br>
             <br>
             <br>
-            hello
+
+            <footer id="footer">
+                ©2018-2021 Alexandru Turcanu
+
+                <div class="social-links-footer">
+                    <a href="mailto:alexandru_turcanu@yahoo.com">
+                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M2.97297 0C1.33105 0 0 1.32656 0 2.96296V14.8148C0 16.4512 1.33105 17.7778 2.97297 17.7778H17.027C18.669 17.7778 20 16.4512 20 14.8148V2.96296C20 1.32656 18.669 0 17.027 0H2.97297ZM1.62162 2.96296C1.62162 2.21915 2.22664 1.61616 2.97297 1.61616H17.027C17.7734 1.61616 18.3784 2.21915 18.3784 2.96296V3.63647L10 9.89901L1.62162 3.63631V2.96296ZM1.62162 5.65652V14.8148C1.62162 15.5586 2.22664 16.1616 2.97297 16.1616H17.027C17.7734 16.1616 18.3784 15.5586 18.3784 14.8148V5.65666L10 11.9192L1.62162 5.65652Z" fill="#858585"></path>
+                        </svg>
+                    </a>
+                    <a href="https://twitter.com/pondorasti">
+                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M19.9613 2.52817C19.2242 2.8686 18.4372 3.10035 17.6065 3.2051C18.4522 2.6722 19.1031 1.83029 19.4091 0.827336C18.6171 1.31179 17.7389 1.66531 16.8045 1.86172C16.0575 1.02374 14.9931 0.5 13.8114 0.5C11.5478 0.5 9.71143 2.42473 9.71143 4.79464C9.71143 5.13507 9.74891 5.46241 9.81761 5.77665C6.40974 5.60643 3.38788 3.8912 1.3654 1.2987C1.01062 1.92849 0.810743 2.66172 0.810743 3.46042C0.810743 4.95307 1.53529 6.26634 2.6346 7.03755C1.96252 7.01529 1.32917 6.8215 0.777014 6.50072V6.55309C0.777014 8.63494 2.18863 10.3737 4.06621 10.7692C3.72142 10.8661 3.35915 10.9184 2.98563 10.9184C2.7233 10.9184 2.47345 10.8922 2.22361 10.8425C2.74828 12.5499 4.25984 13.7924 6.05871 13.8278C4.65959 14.98 2.8857 15.6661 0.974391 15.6661C0.649594 15.6661 0.324797 15.6465 0 15.6072C1.82386 16.8249 3.97252 17.5372 6.29607 17.5372C13.8414 17.5372 17.9638 10.9904 17.9638 5.321C17.9638 5.13769 17.9638 4.95438 17.9513 4.77107C18.7508 4.16878 19.4503 3.40936 20 2.54519L19.9613 2.52817Z" fill="#858585"></path>
+                        </svg>
+                    </a>
+                    <a href="https://www.linkedin.com/in/pondorasti">
+                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M19.615 18H15.804V12.1986C15.804 10.8143 15.7751 9.03461 13.8197 9.03461C11.8338 9.03461 11.5299 10.5408 11.5299 12.097V18H7.71884V6.07063H11.3787V7.69559H11.427C11.9383 6.75811 13.1829 5.76908 15.0402 5.76908C18.8995 5.76908 19.615 8.23776 19.615 11.4517V17.9953V18ZM4.11784 18H0.297157V6.07063H4.11784V18ZM2.21265 4.29989C0.987331 4.29989 0 3.33585 0 2.14838C0 0.964037 0.987331 0 2.21265 0C3.43475 0 4.4253 0.964037 4.4253 2.14838C4.4253 3.33585 3.43315 4.29989 2.21265 4.29989Z"
+                                fill="#858585"></path>
+                        </svg>
+                    </a>
+                    <a href="https://github.com/pondorasti">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M10 0C4.475 0 0 4.59121 0 10.254C0 14.7849 2.865 18.6276 6.8375 19.9824C7.3375 20.0785 7.52125 19.7619 7.52125 19.4889C7.52125 19.2454 7.5125 18.6007 7.50875 17.7458C4.72625 18.3648 4.14 16.3704 4.14 16.3704C3.685 15.1861 3.0275 14.8708 3.0275 14.8708C2.12125 14.2351 3.0975 14.2479 3.0975 14.2479C4.10125 14.3197 4.62875 15.304 4.62875 15.304C5.52125 16.8716 6.97 16.4192 7.54125 16.1564C7.63125 15.4937 7.88875 15.0413 8.175 14.7849C5.95375 14.5286 3.62 13.6467 3.62 9.71819C3.62 8.59923 4.0075 7.68406 4.64875 6.96628C4.53625 6.70737 4.19875 5.66531 4.73625 4.25283C4.73625 4.25283 5.57375 3.97726 7.48625 5.30386C8.28625 5.07571 9.13625 4.96292 9.98625 4.95779C10.8363 4.96292 11.6863 5.07571 12.4863 5.30386C14.3863 3.97726 15.2238 4.25283 15.2238 4.25283C15.7613 5.66531 15.4238 6.70737 15.3238 6.96628C15.9613 7.68406 16.3488 8.59923 16.3488 9.71819C16.3488 13.657 14.0113 14.5247 11.7863 14.7772C12.1363 15.0849 12.4612 15.7129 12.4612 16.6742C12.4612 18.0457 12.4488 19.148 12.4488 19.4812C12.4488 19.7504 12.6238 20.0708 13.1363 19.9683C17.1375 18.6238 20 14.7785 20 10.254C20 4.59121 15.5225 0 10 0Z"
+                                fill="#858585"></path>
+                        </svg>
+                    </a>
+                </div>
+            </footer>
         </div>
     </main>
 </body>

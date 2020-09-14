@@ -27,3 +27,16 @@ mark.designer {
 mark.developer {
     background-color:rgb(113, 250, 177);
 }
+
+.about-me-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.about-me-container img {
+    width: 16rem;
+    height: 16rem;
+    margin-right: 3.2rem;
+
+    border-radius: 2.4rem;
+}

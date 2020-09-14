@@ -1,0 +1,11 @@
+#footer {
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+
+    margin-bottom: 4.0rem;
+}
+
+.social-links-container {
+    float: right;
+}
