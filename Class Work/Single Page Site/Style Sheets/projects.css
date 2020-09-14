@@ -1,0 +1,74 @@
+.projects-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+/* Project Card */
+
+.project {
+    position: relative;
+    
+    overflow: hidden;
+
+    transition: 0.3s;
+    margin: 1.6rem;
+    width: 100%;
+
+    background-color: red;
+}
+
+.project img {
+    width: 100%;
+    border-radius: 2.4rem;
+    object-fit: contain;
+    
+}
+
+.project:hover {
+    /* width: 125%; */
+}
+
+.project:hover .project-content {
+    height: 100%;
+    border-radius: 2.4rem 2.4rem 2.4rem 2.4rem;
+}
+
+.project-content {
+    width: 100%;
+    height: 20%;
+    position: absolute;
+    bottom: 0;
+    
+    box-sizing: border-box;
+    padding: 3%;
+    border-radius: 0rem 0rem 2.4rem 2.4rem;
+    color: white;
+
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);    
+
+    transition: 0.3s;
+}
+
+.project-content h2 {
+    font-size: 2.0rem;
+}
+
+.project-content p {
+    /* height: 120%; */
+    visibility: hidden;
+    /* color: red; */
+}
+
+.project:hover p {
+    visibility: visible;
+}
+
+@media (max-width: 944px) {
+    .projects-container {
+        flex-direction: column;
+    }
+}
