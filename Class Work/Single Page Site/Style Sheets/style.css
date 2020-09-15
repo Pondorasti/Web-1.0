@@ -2,7 +2,7 @@ html {
     font-size: 62.5%;
     scroll-behavior: smooth;
 
-    font-family: 'Inter var', sans-serif;
+    font-family: 'Helvetica Now Text',sans-serif;
     background-color: rgba(242, 242, 247);
 }
 
@@ -19,20 +19,25 @@ html {
 @media (max-width: 1680px) { .wrapper { padding: 0 16%; } }
 
 h1 {
+    font-size: 3.4rem;
+
     margin-top: 12.0rem;
     margin-bottom: 4.0rem;
 }
 
-.card {
-    background-color: white;
+body { font-size: 1.4rem; } 
+p { font-size: 2.2rem; }
 
-    padding: 2.4rem;
-    border-radius: 2.4rem;
+h2 {
+    font-size: 2.2rem;
+    margin-bottom: 0.8rem;
 }
 
-body { font-size: 1.4rem; }
-h1 { font-size: 3.4rem; }
-p { font-size: 2.2rem; }
+.secondary {
+    font-weight: normal;
+    font-size: 2.0rem;
+    color: rgba(60, 60, 67);
+}
 
 @media (prefers-color-scheme: dark) {
     body {
@@ -47,5 +52,9 @@ p { font-size: 2.2rem; }
 
     .card {
         background-color: rgba(50, 50, 50);
+    }
+
+    .secondary {
+        color: rgba(235, 235, 245); 
     }
 }
