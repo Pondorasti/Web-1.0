@@ -11,12 +11,10 @@ html {
     padding: 0;
 
     box-sizing: border-box;
-}
 
-.wrapper { padding: 0 23%; }
-@media (max-width: 696px) { .wrapper { padding: 0 8%; } }
-@media (max-width: 944px) { .wrapper { padding: 0 12.5%; } }
-@media (max-width: 1680px) { .wrapper { padding: 0 16%; } }
+    text-decoration: none;
+    list-style: none;
+}
 
 h1 {
     font-size: 3.4rem;
@@ -29,24 +27,46 @@ body { font-size: 1.4rem; }
 p { font-size: 2.2rem; }
 
 h2 {
-    font-size: 2.2rem;
-    margin-bottom: 0.8rem;
+    color: black;
+    font-size: 2.8rem;
+    margin-bottom: 1.6rem;
 }
 
 .secondary {
     font-weight: normal;
     font-size: 2.0rem;
-    color: rgba(60, 60, 67);
+    color: #858585;
 }
 
+img {
+    border-radius: 2.4rem;
+}
+
+.default-img {
+    width: 22.0rem;
+    height: 22.0rem;
+    margin-right: 4.0rem;
+    margin-bottom: 4.0rem;
+}
+
+
+/* Website Margin */
+
+.wrapper { padding: 0 23%; }
+@media (max-width: 696px) { .wrapper { padding: 0 8%; } }
+@media (max-width: 944px) { .wrapper { padding: 0 12.5%; } }
+@media (max-width: 1680px) { .wrapper { padding: 0 16%; } }
+
+
+/* Dark Mode */
+
 @media (prefers-color-scheme: dark) {
-    body {
+    html {
         color: white;
         background-color: rgba(19, 19, 19);
     }
 
     img {
-        /* opacity: 0.9; */
         filter: brightness(0.9)        
     }
 
@@ -55,6 +75,10 @@ h2 {
     }
 
     .secondary {
-        color: rgba(235, 235, 245); 
+        color: #858585;
+    }
+
+    h2 {
+        color: white;
     }
 }

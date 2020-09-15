@@ -1,0 +1,23 @@
+.article a {
+    display: flex;
+    flex-direction: row;
+}
+
+.article img {
+    width: 20rem;
+    height: 20rem;
+
+    border-radius: 2.4rem;
+}
+
+.article-content {
+    width: 60%;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.article-content *:last-child {
+    align-self: flex-end;
+    color: blue;
+}
