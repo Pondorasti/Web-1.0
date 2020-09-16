@@ -17,13 +17,15 @@ nav {
     padding: 1rem;
 
     font-weight: 600;
+    
 
     display: flex;
     flex-direction: row;
     justify-content: space-between;   
     align-items: baseline; 
 
-    background: rgb(255, 255, 255, 0.7);
+    background: rgb(0, 0, 0, 0.7);
+    background: rgba(5, 19, 38, 0.4);
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);    
 }
@@ -33,16 +35,15 @@ nav ul {
     flex-direction: row;
 }
 
-nav ul a {
-    padding: 0rem 0.5rem;
-}
+nav ul a { padding: 0rem 0.5rem; }
+nav * a { color: white; }
 
 
 /* Hero */
 
-#hero {
-    background-image: url('Images/hero.jpg');
+.hero-section {
     background-size: cover;
+    background-attachment: fixed;
     height: 100vh;
 
     display: flex;
@@ -50,14 +51,21 @@ nav ul a {
     align-items: center;
 }
 
-#hero h1 {
+.hero-text {
     margin: 0;
+    padding: 1rem;
+    border-radius: 1rem;
+
+    background: rgb(0, 0, 0, 0.7);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);    
 
     color: white;
-    text-shadow: 2px 2px #000;
-
     font-size: 4.0rem;
 }
+
+#hero { background-image: url('Images/hero.jpg'); }
+#iot { background-image: url('Images/iot.jpg'); }
 
 
 /* Boards */
@@ -78,6 +86,9 @@ nav ul a {
 
     border: 1px solid #e1e4e8;
     border-radius: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px;
+    /* transition: all .3s ease-in-out; */
+    transition: all 0.3s; 
 }
 
 .board-card img {
@@ -89,4 +100,9 @@ nav ul a {
 
 .board-card h3, p {
     padding: 0rem 1rem;
+}
+
+.board-card:hover {
+    box-shadow: rgba(0, 0, 0, 0.22) 0px 16px 32px;
+    transform: scale(1.02, 1.02)
 }
