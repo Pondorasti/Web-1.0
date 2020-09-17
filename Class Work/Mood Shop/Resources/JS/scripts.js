@@ -33,20 +33,43 @@ data.forEach(function (item, index) {
 const cart = []
 
 function addItem(name, price) {
-    const item = {
-        name: name,
-        price: price,
-        qty: 1
+    const item = { name, price, qty: 1 }
+
+    for (let index = 0; index < cart.length; ++index) {
+        if (cart[index].name === name) {
+            ++cart[index].qty;
+            return
+        }
     }
 
     cart.push(item)
 }
 
 function showItems() {
-    console.log(`You have ${cart.length} items in your cart.`)
+    console.log(`You have ${getQtq()} items in your cart.`)
+    console.log(`Total in cart: ${getTotal()}`)
+}
+
+function getQtq() {
+    let numberOfItems = 0
+    cart.forEach(function(item, index) {
+        numberOfItems += item.qty
+    })
+
+    return numberOfItems
+}
+
+function getTotal() {
+    let total = 0
+    cart.forEach(function(item, index) {
+        total += item.qty * item.price
+    })
+
+    return total.toFixed(2)
 }
 
 addItem('Apple', 0.99)
 addItem('Orange', 1.29)
+addItem('Apple', 0.99)
 
 showItems()
