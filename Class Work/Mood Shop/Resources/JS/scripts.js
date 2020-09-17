@@ -2,7 +2,6 @@ import data from './data.js'
 
 const itemsContainer = document.getElementById('items')
 
-
 data.forEach(function (item, index) {
     let newDiv = document.createElement('div')
     newDiv.className = 'item'
@@ -29,3 +28,25 @@ data.forEach(function (item, index) {
         
     itemsContainer.appendChild(newDiv)
 });
+
+
+const cart = []
+
+function addItem(name, price) {
+    const item = {
+        name: name,
+        price: price,
+        qty: 1
+    }
+
+    cart.push(item)
+}
+
+function showItems() {
+    console.log(`You have ${cart.length} items in your cart.`)
+}
+
+addItem('Apple', 0.99)
+addItem('Orange', 1.29)
+
+showItems()
