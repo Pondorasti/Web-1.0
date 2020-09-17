@@ -68,8 +68,28 @@ function getTotal() {
     return total.toFixed(2)
 }
 
+function removeItem(name, qty = 0) {
+    cart.forEach(function(item, index) {
+        if (item.name === name) {
+            if (qty > 0) {
+                item.qty -= qty;
+            }
+
+            if (item.qty < 1 || qty === 0) {
+                cart.splice(index, 1)
+            }
+
+            return
+        }
+    })
+}
+
 addItem('Apple', 0.99)
 addItem('Orange', 1.29)
 addItem('Apple', 0.99)
+
+showItems()
+
+removeItem('Apple')
 
 showItems()
