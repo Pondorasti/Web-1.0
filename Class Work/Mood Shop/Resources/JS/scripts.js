@@ -101,3 +101,10 @@ addItem('Orange', 1.29)
 addItem('Apple', 0.99)
 
 showItems()
+
+const allItemsButton = Array.from(document.querySelectorAll('button'))
+
+allItemsButton.forEach(elt => elt.addEventListener('click', () => {
+    addItem(elt.getAttribute('id'), elt.getAttribute('data-price'))
+    showItems()
+}))
