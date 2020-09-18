@@ -1,6 +1,9 @@
 import data from './data.js'
 
 const itemsContainer = document.getElementById('items')
+const itemsList = document.getElementById('items-list')
+const cartQtq = document.getElementById('cart-qtq')
+const cartTotal = document.getElementById('cart-total')
 
 data.forEach(function (item, index) {
     let newDiv = document.createElement('div')
@@ -46,8 +49,17 @@ function addItem(name, price) {
 }
 
 function showItems() {
-    console.log(`You have ${getQtq()} items in your cart.`)
-    console.log(`Total in cart: ${getTotal()}`)
+    cartQtq.innerHTML = `You have ${getQtq()} items in your cart.`
+    cartTotal.innerHTML = `Total in cart: ${getTotal()}`
+
+    let htmlStr = ''
+    cart.forEach(function(item, index) {
+        const { name, price, qty } = cart[index]
+        const total = (qty * price).toFixed(2)
+
+        htmlStr += `<li> ${name} $${price} x ${qty} = ${total} </li>`
+    })
+    itemsList.innerHTML = htmlStr
 }
 
 function getQtq() {
@@ -87,9 +99,5 @@ function removeItem(name, qty = 0) {
 addItem('Apple', 0.99)
 addItem('Orange', 1.29)
 addItem('Apple', 0.99)
-
-showItems()
-
-removeItem('Apple')
 
 showItems()
