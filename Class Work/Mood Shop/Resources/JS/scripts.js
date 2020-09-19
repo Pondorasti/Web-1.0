@@ -41,6 +41,7 @@ function addItem(name, price) {
     for (let index = 0; index < cart.length; ++index) {
         if (cart[index].name === name) {
             ++cart[index].qty;
+            showItems()
             return
         }
     }
@@ -57,7 +58,15 @@ function showItems() {
         const { name, price, qty } = cart[index]
         const total = (qty * price).toFixed(2)
 
-        htmlStr += `<li> ${name} $${price} x ${qty} = ${total} </li>`
+        htmlStr += `
+        <li>
+            ${name} $${price} x ${qty} = ${total} 
+            <button class="remove" data-name="${name}">Remove</button>
+            <button class="add" data-name="${name}"> + </button>
+            <button class="subtract" data-name="${name}"> - </button>
+            <input class="update" type="number" min="0" data-name="${name}"> </input>
+        </li>
+        `
     })
     itemsList.innerHTML = htmlStr
 }
@@ -91,14 +100,30 @@ function removeItem(name, qty = 0) {
                 cart.splice(index, 1)
             }
 
+            showItems()
             return
         }
     })
 }
 
-addItem('Apple', 0.99)
-addItem('Orange', 1.29)
-addItem('Apple', 0.99)
+function updateItem(name, qtq) {
+    cart.forEach(function(item, index) {
+        if (item.name === name) {
+            item.qty = qtq
+
+            if (qtq === 0) {
+                cart.splice(index, 1)
+            }
+
+            showItems()
+            return
+        }
+    })
+}
+
+// addItem('apple', 0.99)
+// addItem('orange', 1.29)
+// addItem('apple', 0.99)
 
 showItems()
 
@@ -108,3 +133,26 @@ allItemsButton.forEach(elt => elt.addEventListener('click', () => {
     addItem(elt.getAttribute('id'), elt.getAttribute('data-price'))
     showItems()
 }))
+
+itemsList.onclick = function(event) {
+    if (!event.target) { return }
+
+    const name = event.target.dataset.name
+    if (event.target.classList.contains('remove')) {
+        removeItem(name)
+    } else if (event.target.classList.contains('add')) {
+        addItem(name)
+    } else if (event.target.classList.contains('subtract')) {
+        removeItem(name, 1)
+    }
+}
+
+
+itemsList.onchange = function(event) {
+    if (event.target && event.target.classList.contains('update')) {
+        const name = event.target.dataset.name
+        const qtq = parseInt(event.target.value)
+
+        updateCart(name, qtq)
+    }
+}
