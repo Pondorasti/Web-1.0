@@ -129,7 +129,7 @@ showItems()
 
 const allItemsButton = Array.from(document.querySelectorAll('button'))
 
-allItemsButton.forEach(elt => elt.addEventListener('click', () => {
+allItemsButton.forEach(elt => elt.addEventListener('click', function() { // () => {
     addItem(elt.getAttribute('id'), elt.getAttribute('data-price'))
     showItems()
 }))
@@ -153,6 +153,6 @@ itemsList.onchange = function(event) {
         const name = event.target.dataset.name
         const qtq = parseInt(event.target.value)
 
-        updateCart(name, qtq)
+        updateItem(name, qtq)
     }
 }
