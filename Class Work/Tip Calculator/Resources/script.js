@@ -13,12 +13,14 @@ function calculateTip() {
     const tipAmount = billValue * tipValue / 100 / peopleValue
     const total = (billValue + tipAmount) / peopleValue
 
-    displayTip.innerHTML = `Tip: ${tipAmount.toFixed(2)}`
-    displayTotal.innerHTML = `Total: ${total.toFixed(2)}`
+    displayTip.innerHTML = `Tip per person: ${tipAmount.toFixed(2)}`
+    displayTotal.innerHTML = `Total per person: ${total.toFixed(2)}`
 }
 
 billInput.addEventListener('input', calculateTip)
 tipInput.addEventListener('input', calculateTip)
 peopleInput.addEventListener('input', calculateTip)
+
+
 
 calculateTip()

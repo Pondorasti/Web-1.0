@@ -1,31 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tip Calculator</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="Resources/styles.css">
 </head>
+
 <body>
     <main>
-        <h1>Tip Calc</h1>
-        
-        <div id="wrapper">
+        <h1>Tip Calculator</h1>
+
+        <form>
             <div id="input-container">
-                <input id="bill" value="10.00" type="number">
-                <input id="tip" value="15.00" type="number">
-                <input id="people" value="1" type="number">
+                <label for="bill">Bill</label>
+
+                <div class="custom-input">
+                    <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
+                        <img src="Resources/Images/minus.svg" alt="minus">
+                    </button>
+
+                    <input id="bill" name="bill" type="number" value="10.00" min="0">
+
+                    <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
+                        <img src="Resources/Images/plus.svg" alt="plus">
+                    </button>
+                </div>
+
+                
+                <label for="tip">Tip</label>
+                <div class="custom-input">
+                    <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
+                        <img src="Resources/Images/minus.svg" alt="minus">
+                    </button>
+
+                    <input id="tip" name="tip" type="number" value="15" min="0">    
+                    
+                    <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
+                        <img src="Resources/Images/plus.svg" alt="plus">
+                    </button>
+                </div>
+
+                <label for="people">People</label>
+                <div class="custom-input">
+                    <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
+                        <img src="Resources/Images/minus.svg" alt="minus">
+                    </button>
+                    
+                    <input id="people" name="people" type="number" value="1" min="1">
+
+                    <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
+                        <img src="Resources/Images/plus.svg" alt="plus">
+                    </button>
+                </div>
             </div>
 
             <div class="divider"></div>
 
-            <div id="display-container">
-                <div id="display-tip">0.00</div>
-                <div id="display-total">0.00</div>
+            <div id="output-container">
+                <output id="display-tip" for="bill tip people">0.00</output>
+                <output id="display-total" for="bill tip people">0.00</output>
             </div>
-        </div>
+        </form>
     </main>
 
-    <script src="script.js"></script>
+    <script src="Resources/script.js"></script>
 </body>
+
 </html>
