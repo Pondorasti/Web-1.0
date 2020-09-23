@@ -11,7 +11,9 @@ function calculateTip() {
     const peopleValue = parseInt(peopleInput.value)
 
     const tipAmount = billValue * tipValue / 100 / peopleValue
-    const total = (billValue + tipAmount) / peopleValue
+    const total = (billValue + tipAmount ) / peopleValue
+
+    
 
     displayTip.innerHTML = `Tip per person: ${tipAmount.toFixed(2)}`
     displayTotal.innerHTML = `Total per person: ${total.toFixed(2)}`
@@ -21,6 +23,24 @@ billInput.addEventListener('input', calculateTip)
 tipInput.addEventListener('input', calculateTip)
 peopleInput.addEventListener('input', calculateTip)
 
-
-
 calculateTip()
+
+const plusButtons = Array.from(document.getElementsByClassName('plus'))
+plusButtons.forEach(function(item, index) {
+    item.onclick = function(event) {
+        const input = item.parentNode.querySelector('input[type=number]')
+        input.value = parseInt(input.value) + 1
+        
+        calculateTip()
+    }
+})
+
+const minusButtons = Array.from(document.getElementsByClassName('minus'))
+minusButtons.forEach(function(item, index) {
+    item.onclick = function(event) {
+        const input = item.parentNode.querySelector('input[type=number]')
+        input.value = parseInt(input.value) - 1
+        
+        calculateTip()
+    }
+})
