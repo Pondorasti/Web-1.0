@@ -10,11 +10,16 @@ function calculateTip() {
     const tipValue = parseInt(tipInput.value)
     const peopleValue = parseInt(peopleInput.value)
 
+    if (Number.isNaN(billValue) || Number.isNaN(tipValue) || Number.isNaN(peopleValue)) {
+        alert('Please enter a valid number')
+
+    } else {
+        console.log(billValue)
+    }
+
     const tipAmount = billValue * tipValue / 100 / peopleValue
     const total = (billValue + tipAmount ) / peopleValue
-
     
-
     displayTip.innerHTML = `Tip per person: ${tipAmount.toFixed(2)}`
     displayTotal.innerHTML = `Total per person: ${total.toFixed(2)}`
 }
