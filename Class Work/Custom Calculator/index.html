@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ohm's Law Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main>
+        <h1>Ohm's Law Calculator</h1>
+        <form>  
+            <label>
+                Voltage (V)
+                <input type="number" name="voltage" id="voltage" class="left-margin">
+                <span class="left-margin">Volts (V)</span>
+            </label>
+
+            <label>
+                Current (I)
+                <input type="number" name="current" id="current" class="left-margin">
+                <select name="amps-menu" id="amps-menu" class="left-margin">
+                    <option value="amps">amps (A)</option>
+                    <option value="milliamps">milliamps (mA)</option>
+                </select>
+            </label>
+
+            <label>
+                Resistance (R)
+                <input type="number" name="resistance" id="resistance" class="left-margin">
+
+                <select name="ohms-menu" id="ohms-menu" class="left-margin">
+                    <option value="ohms">ohms (Ω)</option>
+                    <option value="kilohms">kilohms (kΩ)</option>
+                </select>
+            </label>
+
+            <label>
+                Power (P)
+                <input type="number" name="power" id="power" class="left-margin">
+                <span class="left-margin">Watts (W)</span>
+            </label>
+        </form>
+    </main>
+</body>
+</html>
+
+
