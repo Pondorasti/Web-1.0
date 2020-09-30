@@ -8,6 +8,10 @@ main {
 form {
     display: flex;
     flex-direction: column;
+
+    padding: 16px;
+    border: 1px solid #ddd;
+    border-radius: 16px;
 }
 
 label {
@@ -19,9 +23,14 @@ label {
     margin: 8px 0;
 }
 
+label * {
+    width: 100px;
+}
+
 label input {
     padding: 4px;
     border-radius: 8px;
+    overflow: visible;
 }
 
 label select {
@@ -30,4 +39,9 @@ label select {
 
 .left-margin {
     margin-left: 24px; 
+}
+
+.details {
+    font-weight: normal;
+    text-align: end;
 }
