@@ -24,10 +24,16 @@ function updateCalculator() {
     resistance = voltage / current
     power = voltage * current
 
+    if (isNaN(power)) { return }
+
+    $('#resistance').fadeOut(0).fadeIn(200)
+    $('#power').fadeOut(0).fadeIn(200)
+
     if (ohmsMenu.value == "ohms") {
         resistanceInput.value = resistance.toFixed(2)
     } else {
         resistanceInput.value = (resistance / 1000).toFixed(4)
     }
-    powerInput.value = power.toFixed(3)
+
+    powerInput.value = power.toFixed(3)    
 }
