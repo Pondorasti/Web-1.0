@@ -1,0 +1,26 @@
+main {
+    display: flex;
+    flex-direction: row;
+}
+
+h1 {
+    margin-bottom: 0px;
+}
+
+section {
+    margin: 24px 32px;
+}
+
+.subtitle {
+    margin-top: 6px;
+}
+
+fieldset {
+    padding: 16px;
+    border: 4px solid black;
+}
+
+#display {
+    padding: 64px;
+    border: 4px solid black;
+}
