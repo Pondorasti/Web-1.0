@@ -24,7 +24,7 @@
                         </legend>
 
                         <label for="font-size">Font Size</label>
-                        <input name="font-size" id="font-size" type="number" min="0" step="1">
+                        <input name="font-size" id="font-size" type="number" min="0" step="1" value="16">
                         <br>
 
                         <label for="font-family">Font Family</label>
@@ -39,11 +39,11 @@
                         <br>
 
                         <label for="background-color">Background Color</label>
-                        <input name="background-color" id="background-color" type="color">
+                        <input name="background-color" id="background-color" type="color" value="#ffffff">
                         <br>
 
                         <label for="text-input">Enter text</label>
-                        <textarea name="text-input" id="text-input" type="text"></textarea>
+                        <textarea name="text-input" id="text-input" type="text">My headline</textarea>
                     </fieldset>
                 </form>
             </section>
@@ -59,9 +59,9 @@
                 <pre class="subtitle">
 <code>.headline {
     font-size: <span id="show-size">16</span>px;
-    font-family: <span id="show-font">Times</span>;
-    color: <span id="show-color">#000</span>;
-    background-color: <span id="show-bg-color">#fff</span>
+    font-family: <span id="show-font">Georgia</span>;
+    color: <span id="show-color">#000000</span>;
+    background-color: <span id="show-bg-color">#ffffff</span>
 }
             </code>
         </pre>
@@ -69,6 +69,7 @@
         </div>
     </main>
 
+    <script src="script.js"></script>
 </body>
 
 </html>
