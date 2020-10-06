@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alexandru Turcanu - Final - Web 1.0</title>
+</head>
+<body>
+    <section id="student-info">
+        <h1>Alexandru Turcanu</h1>
+        <p>My favorite color is red and I wear Nike</p>
+    </section>
+
+    <section id="data-input">
+        <h1>Font Styler</h1>
+        
+        <label for="font-size">Font Size</label>
+        <input name="font-size" id="font-size" type="number" min="0" step="1">
+
+        <label for="font-family">Font Family</label>
+        <select name="font-family" id="font-family">
+            <option value="Georgia">Georgia</option>
+            <option value="Times">Times</option>
+        </select>
+
+        <label for="font-color">Font Color</label>
+        <input name="font-color" id="font-color" type="color">
+
+        <label for="background-color">Background Color</label>
+        <input name="background-color" id="background-color" type="color">
+
+        <label for="text-input">Enter text</label>
+        <textarea name="text-input" id="text-input" type="text"></textarea>
+
+    </section>
+
+    <section id="headline-display">
+        <h1 id="display">My headline</h1>
+    </section>
+
+    <section id="data-output">
+        <h1>Font Settings</h1>
+        <pre>
+            <code>
+.headline {
+    font-size: <span id="show-size">16</span>px;
+    font-family: <span id="show-font">Times</span>;
+    color: <span id="show-color">#000</span>;
+    background-color: <span id="show-bg-color">#fff</span>
+}
+            </code>
+        </pre>
+    </section>
+    
+</body>
+</html>
